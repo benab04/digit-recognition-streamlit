@@ -20,12 +20,12 @@ def canvas_component():
     
     canvas_result = st_canvas(
         fill_color="rgba(255, 165, 0, 0.3)", 
-        stroke_width=16,
+        stroke_width=12,
         stroke_color='#999999',
         background_color='#000000',
         update_streamlit=True,
-        height=300,
-        width=300,
+        height=280,
+        width=280,
         drawing_mode='freedraw',
         point_display_radius=0,
         key="full_app",

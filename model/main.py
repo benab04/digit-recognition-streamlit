@@ -1,5 +1,6 @@
 import tensorflow as tf
-from tensorflow.keras.layers import Dense, Flatten
+from keras.layers import Dense, Flatten
+from keras.regularizers import L2
 import os
 import cv2
 import matplotlib.pyplot as plt
@@ -13,13 +14,13 @@ mnist=tf.keras.datasets.mnist
 x_temp=tf.keras.utils.normalize(x_temp,axis=1)
 x_test=tf.keras.utils.normalize(x_test,axis=1)
 
-x_train, x_cv, y_train, y_cv=train_test_split(x_temp, y_temp, test_size=0.2, random_state=100)
+x_train, x_cv, y_train, y_cv=train_test_split(x_temp, y_temp, test_size=0.2, random_state=42)
 
 model= tf.keras.models.Sequential()
 
 model.add(Flatten(input_shape=(28,28)))
 
-model.add(Dense(128, activation='relu'))
+model.add(Dense(64, activation='relu'))
 
 model.add(Dense(20, activation='relu'))
 
