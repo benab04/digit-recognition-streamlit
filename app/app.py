@@ -21,7 +21,7 @@ def canvas_component():
     canvas_result = st_canvas(
         fill_color="rgba(255, 165, 0, 0.3)", 
         stroke_width=16,
-        stroke_color='#f2f2f2',
+        stroke_color='#999999',
         background_color='#000000',
         update_streamlit=True,
         height=300,
