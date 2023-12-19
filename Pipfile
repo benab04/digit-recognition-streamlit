@@ -9,7 +9,7 @@ numpy = "==1.26.2"
 opencv-python = "==4.8.1.78"
 streamlit = "==1.29.0"
 streamlit-drawable-canvas = "==0.9.3"
-tensorflow = "==2.15.0"
+tensorflow = "*"
 tensorflow-intel = "==2.15.0"
 scikit-learn = "*"
 
