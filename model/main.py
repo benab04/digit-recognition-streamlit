@@ -39,7 +39,7 @@ loss_test, accuracy_test=model.evaluate(x_test, y_test)
 print(f"Cross Validation Loss: {loss_cv}, Test Loss: {loss_test}")
 print(f"Cross Validation Accuracy: {accuracy_cv}, Test Accuracy: {accuracy_test}")
 
-
-with open('model.pkl', 'wb') as f:
-    pickle.dump(model,f)
+model.save("model/model.h5")
+# with open('model.pkl', 'wb') as f:
+#     pickle.dump(model,f)
 

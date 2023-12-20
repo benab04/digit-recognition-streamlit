@@ -3,10 +3,12 @@ import pickle
 import numpy as np
 import cv2
 from streamlit_drawable_canvas import st_canvas
+from keras.models import load_model
 
 token=0
 def add_prediction(data):
-    model=pickle.load(open("model/model.pkl", "rb"))
+    # model=pickle.load(open("model/model.pkl", "rb"))
+    model = load_model("model/model.h5")
     prediction = model.predict(data)
     predicted_class_index = np.argmax(prediction)
 
