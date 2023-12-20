@@ -4,4 +4,4 @@ opencv_python
 scikit_learn
 streamlit
 streamlit_drawable_canvas
-tensorflow
+tensorflow==2.11.0
