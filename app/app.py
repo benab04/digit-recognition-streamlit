@@ -57,6 +57,7 @@ def main():
     
     with st.container():
         st.title("Digit Recognition")
+        st.markdown("Using Convolutional Neural Network")
         with st.container():
             canvas_component()
         

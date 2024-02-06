@@ -1,6 +1,6 @@
 matplotlib
 numpy
-opencv_python
+opencv_python_headless
 scikit_learn
 streamlit
 streamlit_drawable_canvas
