@@ -13,6 +13,7 @@ mnist=tf.keras.datasets.mnist
 
 x_temp=tf.keras.utils.normalize(x_temp,axis=1)
 x_test=tf.keras.utils.normalize(x_test,axis=1)
+print(x_temp, y_temp)
 
 x_train, x_cv, y_train, y_cv=train_test_split(x_temp, y_temp, test_size=0.2, random_state=42)
 
@@ -30,14 +31,16 @@ model.compile(loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=Tru
 
 model.summary()
 
-model.fit(x_train, y_train, epochs=8)
+model.fit(x_train, y_train, epochs=6)
 
+
+loss_train, accuracy_train=model.evaluate(x_train,y_train)
 loss_cv, accuracy_cv=model.evaluate(x_cv,y_cv)
 loss_test, accuracy_test=model.evaluate(x_test, y_test)
 
-
-print(f"Cross Validation Loss: {loss_cv}, Test Loss: {loss_test}")
-print(f"Cross Validation Accuracy: {accuracy_cv}, Test Accuracy: {accuracy_test}")
+print(f"Train Loss: {loss_train},Train Accuracy: {accuracy_train} ")
+print(f"Cross Validation Loss: {loss_cv},Cross Validation Accuracy: {accuracy_cv} ")
+print(f"Test Loss: {loss_test}, Test Accuracy: {accuracy_test}")
 
 model.save("model/model.h5")
 # with open('model.pkl', 'wb') as f:

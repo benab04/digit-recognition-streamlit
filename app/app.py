@@ -8,10 +8,10 @@ from keras.models import load_model
 token=0
 def add_prediction(data):
     # model=pickle.load(open("model/model.pkl", "rb"))
-    model = load_model("model/model.h5")
+    model = load_model("model/model2.h5")
     prediction = model.predict(data)
     predicted_class_index = np.argmax(prediction)
-
+    
        
     with st.container():
         st.markdown(f"<h1 class=result>{predicted_class_index}</h1>",unsafe_allow_html=True )
