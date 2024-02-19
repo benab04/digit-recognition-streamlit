@@ -11,11 +11,10 @@ def add_prediction(data):
     model = load_model("model/model2.h5")
     prediction = model.predict(data)
     predicted_class_index = np.argmax(prediction)
-    
        
     with st.container():
         st.markdown(f"<h1 class=result>{predicted_class_index}</h1>",unsafe_allow_html=True )
-    
+        
     
     
 def canvas_component():
