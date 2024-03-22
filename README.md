@@ -1,6 +1,7 @@
 # Digit Recognition Model README
 
 ### See live website at : https://digit-recognition-benab04.streamlit.app/
+![Screenshot 2024-03-23 003205](https://github.com/benab04/digit-recognition-streamlit/assets/124769045/c5092472-a80e-4fb8-b13c-5c6f3833ea74)
 
 ## Overview
 
